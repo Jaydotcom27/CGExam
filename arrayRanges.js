@@ -1,5 +1,3 @@
-// PENDING REVIEW
-
 function range1(start, end){
     let rangeArray = []
     for (let i = start; i <= end; i++) {
@@ -14,12 +12,12 @@ function arraySum(array){
         sum += array[i] 
     }
     return sum
-
 }
 
-function range2(start, end, step = 0){
+function range2(start, end, step = 1){
     let rangeArray = []
-    for (let i = start; i <= end; i++) {
+    for (let i = start; i <= end; i+=step) {
+        // while(i < end)
         rangeArray.push(i)
     }
     return rangeArray;
@@ -27,4 +25,4 @@ function range2(start, end, step = 0){
 
 console.log(range1(2,8))
 console.log(arraySum(range1(2,8)))
-console.log(range2(2,8,3))
+console.log(range2(2,8,2))

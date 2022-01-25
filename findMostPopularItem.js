@@ -15,8 +15,7 @@ function findMostPopularItem(array){
                 mostPopularItem = array[i - 1]
             }
             counter = 1
-        }
-        
+        }  
     }
     if(counter > maxReached){
         maxReached = counter
