@@ -17,7 +17,6 @@ function arraySum(array){
 function range2(start, end, step = 1){
     let rangeArray = []
     for (let i = start; i <= end; i+=step) {
-        // while(i < end)
         rangeArray.push(i)
     }
     return rangeArray;

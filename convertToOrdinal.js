@@ -15,14 +15,7 @@ function convertToOrdinal(number){
     }
 }
 
-convertToOrdinal(1)
-convertToOrdinal(2)
-convertToOrdinal(3)
-convertToOrdinal(11)
-convertToOrdinal(12)
-convertToOrdinal(13)
-convertToOrdinal(21)
-convertToOrdinal(22)
-convertToOrdinal(23)
-convertToOrdinal(123)
-convertToOrdinal(849)
+let sampleTest = [1,2,3,11,12,13,21,22,23,123,456]
+for (let i = 0; i < sampleTest.length; i++) {
+    convertToOrdinal(sampleTest[i])
+}
