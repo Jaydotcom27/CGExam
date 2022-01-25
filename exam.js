@@ -45,31 +45,63 @@
 // }
 // console.log(getFactorial(5))
 
-function convertToOrdinal(number){
-    let lastDigit = number.toString().slice(-1)
-    if((number === 12  || number === 13  )){
-        console.log(`${number}th`)
-    } 
-    else if((lastDigit === '1' && number != 11)){
-        console.log(`${number}st`)
-    } else if ((lastDigit === '2' && number != 12)){
-        console.log(`${number}nd`)
-    } else if ((lastDigit === '3' && number != 13)){
-        console.log(`${number}rd`)
-    } 
-    else {
-        console.log(`${number}th`)
+// function convertToOrdinal(number){
+//     let lastDigit = number.toString().slice(-1)
+//     if((number === 12  || number === 13  )){
+//         console.log(`${number}th`)
+//     } 
+//     else if((lastDigit === '1' && number != 11)){
+//         console.log(`${number}st`)
+//     } else if ((lastDigit === '2' && number != 12)){
+//         console.log(`${number}nd`)
+//     } else if ((lastDigit === '3' && number != 13)){
+//         console.log(`${number}rd`)
+//     } 
+//     else {
+//         console.log(`${number}th`)
+//     }
+// }
+
+// convertToOrdinal(1)
+// convertToOrdinal(2)
+// convertToOrdinal(3)
+// convertToOrdinal(11)
+// convertToOrdinal(12)
+// convertToOrdinal(13)
+// convertToOrdinal(21)
+// convertToOrdinal(22)
+// convertToOrdinal(23)
+// convertToOrdinal(123)
+
+
+// PENDING REVIEW
+
+function range1(start, end){
+    let rangeArray = []
+    for (let i = start; i <= end; i++) {
+        rangeArray.push(i)
     }
+    return rangeArray;
 }
 
-convertToOrdinal(1)
-convertToOrdinal(2)
-convertToOrdinal(3)
-convertToOrdinal(11)
-convertToOrdinal(12)
-convertToOrdinal(13)
-convertToOrdinal(21)
-convertToOrdinal(22)
-convertToOrdinal(23)
-convertToOrdinal(123)
+function arraySum(array){
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i] 
+    }
+    return sum
+
+}
+
+function range2(start, end, step = 0){
+    let rangeArray = []
+    for (let i = start; i <= end; i++) {
+        rangeArray.push(i)
+    }
+    return rangeArray;
+}
+
+console.log(range1(2,8))
+console.log(arraySum(range1(2,8)))
+console.log(range2(2,8,3))
 
