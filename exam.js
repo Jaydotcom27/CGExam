@@ -76,32 +76,73 @@
 
 // PENDING REVIEW
 
-function range1(start, end){
-    let rangeArray = []
-    for (let i = start; i <= end; i++) {
-        rangeArray.push(i)
+// function range1(start, end){
+//     let rangeArray = []
+//     for (let i = start; i <= end; i++) {
+//         rangeArray.push(i)
+//     }
+//     return rangeArray;
+// }
+
+// function arraySum(array){
+//     let sum = 0
+//     for (let i = 0; i < array.length; i++) {
+//         sum += array[i] 
+//     }
+//     return sum
+
+// }
+
+// function range2(start, end, step = 0){
+//     let rangeArray = []
+//     for (let i = start; i <= end; i++) {
+//         rangeArray.push(i)
+//     }
+//     return rangeArray;
+// }
+
+// console.log(range1(2,8))
+// console.log(arraySum(range1(2,8)))
+// console.log(range2(2,8,3))
+
+// function truncateWords(phrase, words){
+//     return phrase.split(" ").splice(0, words).join(" ")
+// }
+
+// console.log(truncateWords("jeremy es pionero en informatica", 3))
+
+// function alphabetizeString(phrase){
+//     let cleanString = phrase.replaceAll(" ", "")
+//     return cleanString.split('').sort().join('')
+// }
+
+// console.log(alphabetizeString("Lorem ipsum"))
+
+function findMostPopularItem(array){
+
+    array.sort()
+    let mostPopularItem = array[0]
+    let counter = 1
+    let maxReached = 1
+    let arrayLength = array.length;
+
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] == array[i-1]){
+            counter++
+        }else{
+            if( counter > maxReached){
+                maxReached = counter
+                mostPopularItem = array[i - 1]
+            }
+            counter = 1
+        }
+        
     }
-    return rangeArray;
+    if(counter > maxReached){
+        maxReached = counter
+        mostPopularItem = array[arrayLength - 1]
+    }
+    return mostPopularItem
 }
 
-function arraySum(array){
-    let sum = 0
-    for (let i = 0; i < array.length; i++) {
-        sum += array[i] 
-    }
-    return sum
-
-}
-
-function range2(start, end, step = 0){
-    let rangeArray = []
-    for (let i = start; i <= end; i++) {
-        rangeArray.push(i)
-    }
-    return rangeArray;
-}
-
-console.log(range1(2,8))
-console.log(arraySum(range1(2,8)))
-console.log(range2(2,8,3))
-
+console.log(findMostPopularItem([1,2,3,4,5,5,6,7,7,7]))
